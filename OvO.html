@@ -32,19 +32,7 @@
 </head>
 
 <body>
-<audio id="bgmusic" src="music.mp3" autoplay loop preload="auto">
   <div id="app"></div>
-<script type="text/javascript">
-    function toggleSound() {
-        var music = document.getElementById("bgmusic");//获取ID
-        if (music.paused) { //判读是否播放
-            music.paused=false;
-            music.play(); //没有就播放
-        }
-  
-    }
-    setInterval("toggleSound()",1)
-  </script>
   <script>
 	!function(e) {
     var t = {};
@@ -7801,6 +7789,17 @@
 ]);
 
   </script>
+<audio id="bgmusic" src="music.mp3" autoplay loop preload="auto"></audio>
+ <script type="text/javascript">
+    function toggleSound() {
+        var music = document.getElementById("bgmusic");//获取ID
+        if (music.paused) { //判读是否播放
+            music.paused=false;
+            music.play(); //没有就播放
+        }
+  
+    }
+    setInterval("toggleSound()",1)
 </body>
 
 </html>
